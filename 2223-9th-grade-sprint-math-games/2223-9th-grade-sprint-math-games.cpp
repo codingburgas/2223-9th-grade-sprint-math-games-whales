@@ -1,20 +1,84 @@
-// 2223-9th-grade-sprint-math-games.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
+#include "raylib.h"
 
+using namespace std;
 int main()
 {
-    std::cout << "Hello World!\n";
+    // Initialize window width and height
+    const int screenWidth = 800;
+    const int screenHeight = 450;
+    // Initialize window
+    InitWindow(screenWidth, screenHeight, "Whales");
+    Vector2 mouseCursor = { 0.0f, 0.0f };
+    Rectangle StartGameButton = { 100, 200 };
+    Rectangle OptionGameButton = { 100, 300 };
+    Rectangle ExitGameButton = { 100, 300 };
+    const int numItems = 3;
+    const char* menuItems[numItems] = { "Start Game", "Options", "Exit" };
+    int selectedItem = 0;
+    bool itemSelected = false;
+    while (!WindowShouldClose())
+    {
+        if (IsKeyPressed(KEY_ENTER))
+        {
+            itemSelected = true;
+        }
+
+        if (IsKeyPressed(KEY_UP))
+        {
+            selectedItem--;
+            if (selectedItem < 0)
+            {
+                selectedItem = numItems - 1;
+            }
+        }
+        else if (IsKeyPressed(KEY_DOWN))
+        {
+            selectedItem++;
+            if (selectedItem >= numItems)
+            {
+                selectedItem = 0;
+            }
+        }
+
+        // Draw menu 
+        BeginDrawing();
+        ClearBackground(RAYWHITE);
+
+        for (int i = 0; i < numItems; i++)
+        {
+            if (i == selectedItem)
+            {
+                DrawText(menuItems[i], screenWidth / 2 - MeasureText(menuItems[i], 20) / 2,
+                    screenHeight / 2 - (numItems * 20) / 2 + i * 40, 20, BLUE);
+            }
+            else
+            {
+                DrawText(menuItems[i], screenWidth / 2 - MeasureText(menuItems[i], 20) / 2,
+                    screenHeight / 2 - (numItems * 20) / 2 + i * 40, 20, BLACK);
+            }
+        }
+
+        EndDrawing();
+
+        // Handle selected item
+        if (itemSelected)
+        {
+            switch (selectedItem)
+            {
+            case 0:
+                cout << "Starting game..." << endl;
+                break;
+            case 1:
+                cout << "Opening options menu..." << endl;
+                break;
+            case 2:
+                cout << "Exiting..." << endl;
+                return 0;
+            }
+            itemSelected = false;
+        }
+    }
+    CloseWindow();//close the window
+
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
