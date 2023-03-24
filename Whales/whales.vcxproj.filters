@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="2223-9th-grade-sprint-math-games.cpp">
+    <ClCompile Include="whales.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
