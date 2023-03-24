@@ -8,11 +8,11 @@ int main() {
     const char* currentDir = GetWorkingDirectory();
     const char* mediaPath = TextFormat("%s/2223-9th-grade-sprint-math-games-whales/", currentDir);
 
-    Image backgroundImage = LoadImage(TextFormat("%svisa.png", mediaPath));
+    Image backgroundImage = LoadImage(TextFormat("%s14.png", mediaPath));
     InitWindow(screenWidth, screenHeight, "Whales");
     
     // Load background image
-    Texture2D background = LoadTextureFromImage(backgroundImage);
+    Texture2D background = LoadTexture("../media/14.png");
     
 
     // Create buttons
@@ -22,7 +22,8 @@ int main() {
 
     while (!WindowShouldClose()) {
         BeginDrawing();
-
+        background.width = GetScreenWidth();
+        background.height = GetScreenHeight();
         // Draw background image
         DrawTexture(background, 0, 0, WHITE);
 
