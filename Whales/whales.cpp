@@ -5,6 +5,55 @@
 using namespace std;
 const int screenWidth = 1000;
 const int screenHeight = 600;
+
+
+void gameMenu()
+{
+    Texture2D gameBackground = LoadTexture("../media/game-background.png");
+    ;
+    while (!WindowShouldClose())
+    {
+
+        DrawTexture(gameBackground, 0, 0, WHITE);
+        
+
+        // Draw text
+        Rectangle gameMenu = { 20, 20, 20, 20};
+        Rectangle Easy = { 20, 20, 20, 20 };
+        Rectangle Medium = { 20, 20, 20, 20 };
+        Rectangle Hard = { 20, 20, 20, 20 };
+        DrawText("game Menu", 460,  150, 30, WHITE);
+        DrawText("Easy", 500, 250, 20, WHITE);
+        DrawText("Medium", 493, 300, 20, WHITE);
+        DrawText("Hard", 500, 350, 20, WHITE);
+
+        // Check for collision
+
+        //check if the button is clicked
+        if (CheckCollisionPointRec(GetMousePosition(), Easy) && IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
+        {
+            DrawText("Easy", 65, 15, 20, RED);
+        }
+        if (CheckCollisionPointRec(GetMousePosition(), Medium) && IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
+
+            DrawText("Medium", 45, 15, 20, RED);
+        }
+
+        if (CheckCollisionPointRec(GetMousePosition(), Hard) && IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
+            DrawText("Hard", 65, 15, 20, RED);
+            
+        }
+
+        EndDrawing();
+    }
+}
+
+
+
+
+
+
+
 void mainMenu()
 {
     //gets the working directory of the photo
@@ -27,11 +76,12 @@ void mainMenu()
     int frameCounter = 0;
     int frameSpeed = 0;
     
-    bool checkPressed = false;
+    bool checkPressedGame = false;
 
 
     while (!WindowShouldClose())
     {
+            
         backgroundAnimation.width = GetScreenWidth();
         backgroundAnimation.height = GetScreenHeight();
         frameRec.width = backgroundAnimation.width / 40;
@@ -43,11 +93,7 @@ void mainMenu()
         // Draw background image
         
         DrawTexture(background, 0, 0, WHITE);
-        if (checkPressed = true)
-        {
-            DrawTexture(backgroundAnimation, 0, 0, WHITE);
-           
-        }
+        
 
         // Draw buttons
         DrawRectangleRec(playButton, WHITE);
@@ -80,10 +126,7 @@ void mainMenu()
         //check if the button is clicked
         if (CheckCollisionPointRec(GetMousePosition(), playButton) && IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
         {
-            checkPressed = true;
-            
-            
-                //DrawTextureRec(backgroundAnimation, frameRec, backgroundAnimationPosition, WHITE);        
+            gameMenu();
         }
         if (CheckCollisionPointRec(GetMousePosition(), optionsButton) && IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
             // Options button clicked
@@ -106,8 +149,6 @@ void mainMenu()
     CloseWindow();
 
 }
-
-
 
 
 int main() 
