@@ -18,11 +18,11 @@ void gameMenu()
         
 
         // Draw text
-        Rectangle gameMenu = { 20, 20, 20, 20};
-        Rectangle Easy = { 20, 20, 20, 20 };
-        Rectangle Medium = { 20, 20, 20, 20 };
-        Rectangle Hard = { 20, 20, 20, 20 };
-        DrawText("game Menu", 460,  150, 30, WHITE);
+        Rectangle gameMenu = { 440, 150, 100, 50};
+        Rectangle Easy = { 500, 250, 100, 50 };
+        Rectangle Medium = { 493, 300, 100, 50 };
+        Rectangle Hard = { 500, 350, 100, 50 };
+        DrawText("GAME MENU", 440,  150, 30, WHITE);
         DrawText("Easy", 500, 250, 20, WHITE);
         DrawText("Medium", 493, 300, 20, WHITE);
         DrawText("Hard", 500, 350, 20, WHITE);
@@ -30,17 +30,17 @@ void gameMenu()
         // Check for collision
 
         //check if the button is clicked
-        if (CheckCollisionPointRec(GetMousePosition(), Easy) && IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
+        if (CheckCollisionPointRec(GetMousePosition(), Easy) || IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
         {
-            DrawText("Easy", 65, 15, 20, RED);
+            DrawText("Easy", 500, 250, 20, RED);
         }
-        if (CheckCollisionPointRec(GetMousePosition(), Medium) && IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
+        if (CheckCollisionPointRec(GetMousePosition(), Medium) || IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
 
-            DrawText("Medium", 45, 15, 20, RED);
+            DrawText("Medium", 493, 300, 20, RED);
         }
 
-        if (CheckCollisionPointRec(GetMousePosition(), Hard) && IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
-            DrawText("Hard", 65, 15, 20, RED);
+        if (CheckCollisionPointRec(GetMousePosition(), Hard) || IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
+            DrawText("Hard", 500, 350, 20, RED);
             
         }
 
