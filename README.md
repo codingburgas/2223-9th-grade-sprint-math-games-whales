@@ -1,5 +1,4 @@
-<h1 align="center">MathGame</h1>
-<h6 align="center">Mission Impossible</h6>
+<h1 align="center">Whales</h1>
 <p align="center">
 <img src="Documents/logo.jpg">
 </p>
