@@ -5,11 +5,81 @@
 using namespace std;
 const int screenWidth = 1000;
 const int screenHeight = 600;
-bool check = false;
+
+void levelMedium()
+{
+    bool check = false;
+    int input = 0;
+    int answer = 1493;
+    Texture2D levelMedium = LoadTexture("../media/level-medium.png");
+    while (!WindowShouldClose())
+    {
+        levelMedium.width = GetScreenWidth();
+        levelMedium.height = GetScreenHeight();
+
+        DrawTexture(levelMedium, 0, 0, WHITE);
+
+
+        // Draw text
+        Rectangle door = { 0, 15, 250, 415 };
+        Rectangle one = { 310, 400, 30, 15 };
+        Rectangle two = { 700, 120, 30, 15 };
+        Rectangle three = { 401, 298, 30, 15 };
+        Rectangle four = { 936, 300, 30, 15 };
+        DrawText("1", 310, 400, 20, YELLOW);
+        DrawText("2", 700, 120, 20, YELLOW);
+        DrawText("3", 401, 298, 20, YELLOW);
+        DrawText("4", 936, 300, 20, GREEN);
+
+        // Check for collision
+        if (CheckCollisionPointRec(GetMousePosition(), one))
+        {
+            DrawText("15 >> 3", 500, 300, 30, WHITE);
+        }
+        if (CheckCollisionPointRec(GetMousePosition(), two))
+        {
+
+            DrawText("5 & 12", 500, 300, 30, WHITE);
+        }
+
+        if (CheckCollisionPointRec(GetMousePosition(), three))
+        {
+            DrawText("14 ^ 9", 500, 300, 30, WHITE);
+
+        }
+        if (CheckCollisionPointRec(GetMousePosition(), four))
+        {
+            DrawText("28 >>> 3", 500, 300, 30, WHITE);
+
+        }
+
+        if (CheckCollisionPointRec(GetMousePosition(), door))
+        {
+
+            if (check == false) {
+                cout << "Enter the value: ";
+                cin >> input;
+                check = true;
+            }
+            if (input == answer)
+            {
+                DrawText("Correct answer! The answer is: 1493", 250, 300, 35, WHITE);
+            }
+            else
+            {
+                DrawText("Incorrect answer! The answer is: 1493", 250, 300, 35, WHITE);
+            }
+
+        }
+
+        EndDrawing();
+    }
+}
 
 void levelEasy()
 {
-    int input;
+    bool check = false;
+    int input = 0;
     int answer = 296;
     Texture2D levelEasy = LoadTexture("../media/level-easy.png");
     while (!WindowShouldClose())
@@ -69,10 +139,89 @@ void levelEasy()
 }
 
 
+
+
+
+void levelHard()
+{
+    bool check = false;
+    int input = 0;
+    int answer = 73207;
+    Texture2D levelHard = LoadTexture("../media/level-hard.png");
+    while (!WindowShouldClose())
+    {
+        levelHard.width = GetScreenWidth();
+        levelHard.height = GetScreenHeight();
+
+        DrawTexture(levelHard, 0, 0, WHITE);
+
+
+        // Draw text
+        Rectangle door = { 400, 200, 100, 300 };
+        Rectangle one = { 337, 142, 30, 15 };
+        Rectangle two = { 600, 300, 30, 15 };
+        Rectangle three = { 512, 418, 30, 15 };
+        Rectangle four = { 100, 280, 30, 15 };
+        Rectangle five = { 655, 93, 30, 15 };
+        DrawText("1", 337, 142, 20, BROWN);
+        DrawText("2", 570, 300, 20, WHITE);
+        DrawText("3", 512, 418, 20, BROWN);
+        DrawText("4", 50, 295, 20, BLUE);
+        DrawText("5", 655, 73, 20, WHITE);
+
+        // Check for collision
+        if (CheckCollisionPointRec(GetMousePosition(), one))
+        {
+            DrawText("15 & 7", 100, 65, 30, WHITE);
+        }
+        if (CheckCollisionPointRec(GetMousePosition(), two))
+        {
+
+            DrawText("24 >>> 3", 100, 65, 30, WHITE);
+        }
+
+        if (CheckCollisionPointRec(GetMousePosition(), three))
+        {
+            DrawText("27 & (15 <<< 1)", 100, 65, 30, WHITE);
+
+        }
+        if (CheckCollisionPointRec(GetMousePosition(), four))
+        {
+            DrawText("(1 << 5) & (1 << 6)", 100, 65, 30, WHITE);
+
+        }
+        if (CheckCollisionPointRec(GetMousePosition(), five))
+        {
+            DrawText("15 & 7", 100, 65, 30, WHITE);
+
+        }
+
+        if (CheckCollisionPointRec(GetMousePosition(), door))
+        {
+            if (check == false) {
+                cout << "Enter the value: ";
+                cin >> input;
+                check = true;
+            }
+            if (input == answer)
+            {
+                DrawText("Correct answer! The answer is: 73207", 250, 300, 35, WHITE);
+            }
+            else
+            {
+                DrawText("Incorrect answer! The answer is: 73207", 250, 300, 35, WHITE);
+            }
+
+        }
+
+        EndDrawing();
+    }
+}
+
+
 void gameMenu()
 {
     Texture2D gameBackground = LoadTexture("../media/game-background.png");
-    ;
     while (!WindowShouldClose())
     {
 
@@ -111,20 +260,19 @@ void gameMenu()
         {
             levelEasy();
         }
-        if (CheckCollisionPointRec(GetMousePosition(), Medium) && IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
-
-            DrawText("Medium", 493, 300, 20, RED);
+        else if (CheckCollisionPointRec(GetMousePosition(), Medium) && IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
+        {
+            levelMedium();
         }
-
-        if (CheckCollisionPointRec(GetMousePosition(), Hard) && IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
-            DrawText("Hard", 500, 350, 20, RED);
+        else if (CheckCollisionPointRec(GetMousePosition(), Hard) && IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) 
+        {
+            levelHard();
 
         }
 
         EndDrawing();
     }
 }
-
 
 
 
@@ -207,8 +355,7 @@ void mainMenu()
         }
         if (CheckCollisionPointRec(GetMousePosition(), optionsButton) && IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
             // Options button clicked
-            
-           
+                    
         }
 
         if (CheckCollisionPointRec(GetMousePosition(), exitButton) && IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
