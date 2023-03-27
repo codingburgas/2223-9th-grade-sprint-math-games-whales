@@ -205,11 +205,11 @@ void levelHard()
             }
             if (input == answer)
             {
-                DrawText("Correct answer! The answer is: 73207", 250, 300, 35, WHITE);
+                DrawText("Correct answer! The answer is: 73207", 200, 30, 35, WHITE);
             }
             else
             {
-                DrawText("Incorrect answer! The answer is: 73207", 250, 300, 35, WHITE);
+                DrawText("Incorrect answer! The answer is: 73207", 200, 30, 35, WHITE);
             }
 
         }
@@ -276,7 +276,23 @@ void gameMenu()
 
 
 
+void about()
+{
+    Texture2D about = LoadTexture("../media/options-menu.png");
+    while (!WindowShouldClose())
+    {
 
+        DrawTexture(about, 0, 0, WHITE);
+        DrawText("Hello, we are team Whales. This is our project. It is a game of bitwise operation.", 240, 220, 16, BLACK);
+        DrawText("You have to find out the little numbers in the room to solve the bitwise operation.", 240, 260, 16, BLACK);
+        DrawText(" When you clicked on the door, you can write in the console app your answer ", 240, 300, 16, BLACK);
+        DrawText("and check if it is correct. By clicking the escape button you can return", 240, 340, 16, BLACK);
+        DrawText("to the menu.", 240, 380, 16, BLACK);
+        about.width = GetScreenWidth();
+        about.height = GetScreenHeight();
+        EndDrawing();
+    }
+}
 
 
 void mainMenu()
@@ -327,7 +343,7 @@ void mainMenu()
 
         // Draw button text
         DrawText("Play", playButton.x + 65, playButton.y + 15, 20, BLACK);
-        DrawText("Options", optionsButton.x + 45, optionsButton.y + 15, 20, BLACK);
+        DrawText("About", optionsButton.x + 60, optionsButton.y + 15, 20, BLACK);
         DrawText("Exit", exitButton.x + 65, exitButton.y + 15, 20, BLACK);
 
         // Check for collision
@@ -340,7 +356,7 @@ void mainMenu()
         if (CheckCollisionPointRec(GetMousePosition(), optionsButton))
         {
             DrawRectangleRec(optionsButton, RED);
-            DrawText("Options", optionsButton.x + 45, optionsButton.y + 15, 20, BLACK);
+            DrawText("About", optionsButton.x + 45, optionsButton.y + 15, 20, BLACK);
         }
         if (CheckCollisionPointRec(GetMousePosition(), exitButton))
         {
@@ -355,7 +371,7 @@ void mainMenu()
         }
         if (CheckCollisionPointRec(GetMousePosition(), optionsButton) && IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
             // Options button clicked
-                    
+            about();
         }
 
         if (CheckCollisionPointRec(GetMousePosition(), exitButton) && IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
