@@ -36,14 +36,4 @@
  
 
 
-## 🎬 Demo of the project
 
- 
-
-<img src="" alt="Whales's game">
-
-## ⚙ Installation
-```
-    You can download our project by cloning the following link in your CMD:
-    https://github.com/codingburgas/2223-9th-grade-sprint-math-games-whales.git
-```
