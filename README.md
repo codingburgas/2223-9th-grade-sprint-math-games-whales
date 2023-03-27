@@ -1,37 +1,63 @@
 <h1 align="center">Whales</h1>
+
 <p align="center">
 <img src="Documents/logo.jpg">
 </p>
 
- 
+<br>
+
+<p align = "center">
+  <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/codingburgas/2223-9th-grade-sprint-math-games-whales?style=flat-square">
+  <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/codingburgas/2223-9th-grade-sprint-math-games-whales?style=flat-square">
+  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/codingburgas/2223-9th-grade-sprint-math-games-whales?style=flat-square">
+  <img src="https://img.shields.io/github/languages/count/codingburgas/2223-9th-grade-sprint-math-games-whales?style=flat-square">
+</p> 
 
 
 ## 🖥 Team Members:
-** Dobril Peev - Scrum Trainer ** <br>
-** Vicho Vichev - Frontend Developer ** <br>
-** Martin Nenkov - Backend Developer ** <br>
-** Nikola Paskov - QA engeneer **
-
- 
+**Dobril Peev** - *Scrum Trainer* <br>
+**Vicho Vichev** - *Frontend Developer* <br>
+**Martin Nenkov** - *Backend Developer* <br>
+**Nikola Paskov** - *QA engeneer*
 
 
-## 🚀 Languages and tools:
-
- 
-
+## 🚀 Languages:
 <p align="left">     
-<img src="https://img.icons8.com/color/48/000000/c-plus-plus-logo.png" width = 48px height = 48px>
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Visual_Studio_Icon_2022.svg/1200px-Visual_Studio_Icon_2022.svg.png" width = 48px height = 48px>
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Raylib_logo.png/120px-Raylib_logo.png?20200407220851" width = 48px height = 48px>
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Microsoft_Excel_2013-2019_logo.svg/2170px-Microsoft_Excel_2013-2019_logo.svg.png" width = 48px height = 48px>
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Microsoft_PowerPoint_2013-2019_logo.svg/2255px-Microsoft_PowerPoint_2013-2019_logo.svg.png" width = 48px height = 48px>
+<img src="https://img.icons8.com/color/48/000000/c-plus-plus-logo.png" width = 48px height = 48px/>
+
+  
+## 🚀 Tools:
+<p align="left">     
+  <a href="https://visualstudio.microsoft.com/"><img src="https://img.icons8.com/fluency/48/000000/visual-studio.png" alt="Visual Studio 2019"/></a>
+  <a href="https://code.visualstudio.com/"><img src="https://img.icons8.com/color/48/null/visual-studio-code-2019.png" alt="Visual Studio Code 2019"/></a>
+  <a href="https://www.microsoft.com/en-ww/microsoft-365/word"><img src="https://img.icons8.com/fluency/48/000000/microsoft-word-2019.png" alt="MS Word logo" width=48px /></a>
+  <a href="https://www.microsoft.com/en-us/microsoft-365/powerpoint"><img src="https://img.icons8.com/fluency/48/000000/microsoft-powerpoint-2019.png" alt="MS PowerPoint logo" width=48px />
+  <a href="https://www.microsoft.com/en-us/microsoft-365/excel"><img src="https://img.icons8.com/fluency/48/000000/microsoft-excel-2019.png" alt="MS Excel logo"/></a>
+  <a href="https://git-scm.com/"><img src="https://img.icons8.com/color/48/000000/git.png" alt="Git"/></a>
+  <a href="https://git-scm.com/"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" heigh=48px width=48px/></a>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Raylib_logo.png/120px-Raylib_logo.png?20200407220851" width = 48px height = 48px/>
   
 
-
-
 ## 📋 Description:
+The game is created to improve peoples math knowledge and to help them memorise more numbers and work faster. 
 
-*The game is created to improve peoples math knowledge and to help them memorise more numbers and work faster. 
+  
+## 📥 Installation
+
+```
+You can download our project by using the green "Code" button.
+
+Or by pasting the following code in your CMD:
+git clone https://github.com/codingburgas/2223-9th-grade-sprint-math-games-whales.git
+```
+
+  
+## ⚙ Website Access
+
+*You can access our website by pasting this link into your browser.*
+```
+  https://github.com/codingburgas/2223-9th-grade-sprint-math-games-whales.git
+```
 
  
 
