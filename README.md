@@ -5,15 +5,6 @@
 </p>
 
 <br>
-
-<p align = "center">
-  <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/codingburgas/2223-9th-grade-sprint-math-games-whales?style=flat-square">
-  <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/codingburgas/2223-9th-grade-sprint-math-games-whales?style=flat-square">
-  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/codingburgas/2223-9th-grade-sprint-math-games-whales?style=flat-square">
-  <img src="https://img.shields.io/github/languages/count/codingburgas/2223-9th-grade-sprint-math-games-whales?style=flat-square">
-</p> 
-
-
 ## 🖥 Team Members:
 **Dobril Peev** - *Scrum Trainer* <br>
 **Vicho Vichev** - *Frontend Developer* <br>
