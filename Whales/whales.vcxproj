@@ -130,7 +130,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="about.cpp" />
+    <ClCompile Include="gameMenu.cpp" />
+    <ClCompile Include="levelEasy.cpp" />
+    <ClCompile Include="levelHard.cpp" />
+    <ClCompile Include="levelMedium.cpp" />
+    <ClCompile Include="mainMenu.cpp" />
     <ClCompile Include="whales.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="about.h" />
+    <ClInclude Include="gameMenu.h" />
+    <ClInclude Include="levelEasy.h" />
+    <ClInclude Include="levelHard.h" />
+    <ClInclude Include="levelMedium.h" />
+    <ClInclude Include="mainMenu.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
