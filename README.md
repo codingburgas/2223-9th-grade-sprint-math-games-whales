@@ -26,7 +26,7 @@
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Raylib_logo.png/120px-Raylib_logo.png?20200407220851" width = 48px height = 48px>
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Microsoft_Excel_2013-2019_logo.svg/2170px-Microsoft_Excel_2013-2019_logo.svg.png" width = 48px height = 48px>
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Microsoft_PowerPoint_2013-2019_logo.svg/2255px-Microsoft_PowerPoint_2013-2019_logo.svg.png" width = 48px height = 48px>
-  <img src="[https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Microsoft_PowerPoint_2013-2019_logo.svg/2255px-Microsoft_PowerPoint_2013-2019_logo.svg.png](https://seeklogo.com/images/M/microsoft-word-logo-E648C182A5-seeklogo.com.png)" width = 48px height = 48px>
+  <img src[="https://w7.pngwing.com/pngs/89/291/png-transparent-microsoft-word-logo-microsoft-word-office-open-xml-document-computer-icons-computer-file-word-file-icon-blue-angle-text.png"width = 48px height = 48px>
 
 
 
