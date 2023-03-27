@@ -5,16 +5,11 @@
 using namespace std;
 const int screenWidth = 1000;
 const int screenHeight = 600;
-
+bool check = false;
 
 void levelEasy()
 {
-
-    const int textBoxWidth = 320;
-    const int textBoxHeight = 64;
-    const int textBoxPosX = screenWidth / 2 - textBoxWidth / 2;
-    const int textBoxPosY = screenHeight / 2 - textBoxHeight / 2;
-    char input[10] = "";
+    int input;
     int answer = 296;
     Texture2D levelEasy = LoadTexture("../media/level-easy.png");
     while (!WindowShouldClose())
@@ -35,25 +30,40 @@ void levelEasy()
         DrawText("3", 936, 260, 20, RED);
 
         // Check for collision
-        if (CheckCollisionPointRec(GetMousePosition(), door))
-        { 
-
-        }
         if (CheckCollisionPointRec(GetMousePosition(), one))
         {
             DrawText("16 >> 3", 500, 150, 30, WHITE);
         }
-        if (CheckCollisionPointRec(GetMousePosition(), two)) 
+        if (CheckCollisionPointRec(GetMousePosition(), two))
         {
 
             DrawText("5 ^ 12", 500, 150, 30, WHITE);
         }
 
-        if (CheckCollisionPointRec(GetMousePosition(), three)) 
+        if (CheckCollisionPointRec(GetMousePosition(), three))
         {
             DrawText("2 | 4", 500, 150, 30, WHITE);
 
         }
+
+        if (CheckCollisionPointRec(GetMousePosition(), door))
+        { 
+            if (check == false) {
+                cout << "Enter the value: ";
+                cin >> input;
+                check = true;
+            }
+                if (input == answer)
+                {
+                    DrawText("Correct answer! The answer is: 296", 225, 90, 35, WHITE);
+                }
+                else
+                {
+                    DrawText("Incorrect answer! The answer is: 296", 225, 90, 35, WHITE);
+                }
+            
+        }
+        
         EndDrawing();
     }
 }
