@@ -7,8 +7,8 @@
 <br>
 ## 🖥 Team Members:
 **Dobril Peev** - *Scrum Trainer* <br>
-**Vicho Vichev** - *Frontend Developer* <br>
-**Martin Nenkov** - *Backend Developer* <br>
+**Vicho Vichev** - *Backend Developer* <br>
+**Martin Nenkov** - *Frontend Developer* <br>
 **Nikola Paskov** - *QA engeneer*
 
 
