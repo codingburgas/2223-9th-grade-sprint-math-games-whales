@@ -18,9 +18,9 @@ void levelHard()
         // Draw text
         Rectangle door = { 400, 200, 100, 300 };
         Rectangle one = { 337, 142, 30, 15 };
-        Rectangle two = { 600, 300, 30, 15 };
+        Rectangle two = { 570, 300, 30, 15 };
         Rectangle three = { 512, 418, 30, 15 };
-        Rectangle four = { 100, 280, 30, 15 };
+        Rectangle four = { 50, 295, 30, 15 };
         Rectangle five = { 655, 73, 30, 15 };
         DrawText("1", 337, 142, 20, BROWN);
         DrawText("2", 570, 300, 20, WHITE);
